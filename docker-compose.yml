@@ -1,0 +1,13 @@
+services:
+  netrunner-cards:
+    container_name: netrunner-cards
+    image: eric03742/netrunner-cards:latest
+    restart: always
+    ports:
+      - 6789:80
+    networks:
+      - netrunner
+
+networks:
+  netrunner:
+    external: true
